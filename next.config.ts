@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "admin.laculpaesdelinternet.com",
+        hostname: "admin.adempiregroup.com",
         port: "",
         pathname: "/**",
       },
