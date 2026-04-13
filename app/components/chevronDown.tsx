@@ -10,7 +10,7 @@ export default function ChevronDown({scrollToSectionChevron, sectionId}: Chevron
   const currentDomain = process.env.NEXT_PUBLIC_WP_DOMAIN;
 
   return (
-    <div className={`py-1 relative z-1 bg-primary-gray`}>
+    <div className={`cursor-pointer py-1 relative z-1 bg-primary-gray`}>
       <Image
         src={`${currentDomain}wp-content/uploads/2026/03/chevron-down.png`}
         alt="Flecha hacia abajo"
