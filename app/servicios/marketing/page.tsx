@@ -122,7 +122,8 @@ export default function Marketing() {
               </div>
               <div className="flex btn-primary-gradiant items-center rounded-full w-fit px-4 py-1 gap-4 absolute font-regular -bottom-4">
                 <a
-                  href="#"
+                  href="https://wa.me/17867866289"
+                  target="_blank"
                   className="text-white">
                   Agenda tu asesoría
                 </a>

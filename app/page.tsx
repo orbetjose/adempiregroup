@@ -5,14 +5,15 @@ import ChevronDown from "./components/chevronDown";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import ContactForm from "./components/ContactForm";
+import { scrollToSectionChevron } from "./utils/wp";
 
 export default function Home() {
   const currentDomain = process.env.NEXT_PUBLIC_WP_DOMAIN;
   const itemsCategories = [
     { title: "Marketing", slug: "/servicios/marketing" },
-    { title: "Asesoría" },
-    { title: "Managment de talentos" },
-    { title: "Cine y TV" },
+    { title: "Asesoría", slug: "#servicios-detalle" },
+    { title: "Managment de talentos", slug: "#bio" },
+    { title: "Cine y TV", slug: "#servicios-detalle" },
     { title: "Música", slug: "/servicios/musica" },
   ];
   const itemsSolutions = [
@@ -78,37 +79,47 @@ export default function Home() {
       imagen: "wp-content/uploads/2026/03/ico-talent.png",
       titulo: "Talent Manager",
       descripcion:
-        "En A&D Empire Group, gestionamos la carrera de talentos con una visión estratégica y desarrollo personalizado, conectándolos con oportunidades clave en entretenimiento, publicidad y eventos.",
+        "En A & D Empire Group, gestionamos la carrera de talentos con una visión estratégica y desarrollo personalizado, conectándolos con oportunidades clave en entretenimiento, publicidad y eventos.",
+      boton:
+        "https://api.whatsapp.com/send?phone=17867866289&text=Hola%20estoy%20interesad@%20en%20su%20servicio%20de%20Talent%20de%20Manager",
     },
     {
       imagen: "wp-content/uploads/2026/03/ico-marketing.png",
       titulo: "Marketing",
       descripcion:
         "Brindamos soluciones de marketing integrales y creativas, incluyendo campañas digitales, branding, posicionamiento de marca y activaciones con impacto real.",
+      boton: "https://www.adempiregroup.com/servicios/marketing",
     },
     {
       imagen: "wp-content/uploads/2026/03/ico-cine.png",
       titulo: "Cine y TV",
       descripcion:
-        "En A&D Empire Group conectamos talentos e influencers con oportunidades reales en cine y televisión, asegurando su visibilidad y proyección en campañas, producciones y proyectos audiovisuales.",
+        "En A & D Empire Group conectamos talentos e influencers con oportunidades reales en cine y televisión, asegurando su visibilidad y proyección en campañas, producciones y proyectos audiovisuales.",
+      boton:
+        "https://api.whatsapp.com/send?phone=17867866289&text=Hola%20estoy%20interesad@%20en%20su%20servicio%20de%20Cine%20y%20de%20TV",
     },
     {
       imagen: "wp-content/uploads/2026/03/ico-asesoria.png",
       titulo: "Asesoría de influencers",
       descripcion:
         "Asesoramos influencers en estrategia de contenido, branding personal, negociación de alianzas, crecimiento de audiencia y activaciones de marca efectivas.",
+      boton:
+        "https://api.whatsapp.com/send?phone=17867866289&text=Hola%20estoy%20interesad@%20en%20su%20servicio%20de%20Asesor%C3%ADa%20para%20influencers",
     },
     {
       imagen: "wp-content/uploads/2026/03/ico-musica.png",
       titulo: "Música",
       descripcion:
-        "A&D Empire Group impulsa talentos musicales con desarrollo artístico, producción, promoción y posicionamiento en medios digitales y espacios en vivo.",
+        "A & D Empire Group impulsa talentos musicales con desarrollo artístico, producción, promoción y posicionamiento en medios digitales y espacios en vivo.",
+      boton: "https://www.adempiregroup.com/servicios/musica",
     },
     {
       imagen: "wp-content/uploads/2026/03/ico-planner.png",
       titulo: "Event Planner",
       descripcion:
         "Organizamos eventos desde la conceptualización hasta la ejecución total: lanzamientos, conciertos, premieres, festivales y eventos corporativos, con atención impecable en cada detalle.",
+      boton:
+        "https://api.whatsapp.com/send?phone=17867866289&text=Hola%20estoy%20interesad@%20en%20su%20servicio%20de%20Event%20planner",
     },
   ];
 
@@ -160,7 +171,7 @@ export default function Home() {
         </div>
       </section>
       <section id="servicios">
-        <ChevronDown />
+        <ChevronDown scrollToSectionChevron={scrollToSectionChevron} sectionId="valor-agregado"/>
         <div className="pt-12 pb-16 text-center relative">
           <Image
             src={`${currentDomain}wp-content/uploads/2026/03/fondo-hacemos.png`}
@@ -171,30 +182,23 @@ export default function Home() {
           />
           <div className="z-1 relative ">
             <h2 className="font-black text-white text-3xl md:text-5xl mb-6">¿Qué hacemos?</h2>
-            <span className="border border-white rounded-full font-regular text-white px-4 py-1 text-lg">
+            <span className="border border-white rounded-full font-regular text-white px-4 py-1 text-lg ">
               Ofrecemos soluciones completas en:
             </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 md:max-w-4xl mx-auto mt-12 font-bold text-primary-blue px-6 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 max-w-lg md:max-w-4xl mx-auto mt-12 font-bold text-primary-blue px-6 md:px-0">
               {itemsSolutions.map((item, index) => (
                 <div
                   key={index}
                   className="bg-white flex items-center gap-4 rounded-full py-1 px-8">
-                  <span className="text-left leading-5">{item}</span>{" "}
-                  <Image
-                    src={`${currentDomain}wp-content/uploads/2026/03/chevron-right.png`}
-                    alt="Flecha hacia la derecha"
-                    className="h-6 object-contain"
-                    width={45}
-                    height={81}
-                  />
+                  <span className="text-center leading-5">{item}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <ChevronDown />
+        <ChevronDown scrollToSectionChevron={scrollToSectionChevron} sectionId="bio" />
       </section>
-      <section className="py-12 bg-primary-gray">
+      <section className="py-12 bg-primary-gray" id="valor-agregado">
         <h3 className="text-3xl md:text-5xl text-center font-black text-primary-blue mb-8">Nuestro valor agregado</h3>
         <div className="md:max-w-4xl mx-auto px-6 md:px-0 flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-evenly">
           <div className="md:w-1/2 text-primary-blue font-regular">
@@ -264,8 +268,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <ChevronDown />
-      <section className="bg-primary-gray" id="bio">
+      <ChevronDown scrollToSectionChevron={scrollToSectionChevron} sectionId="servicios-detalle" />
+      <section
+        className="bg-primary-gray"
+        id="bio">
         <div className="flex flex-col md:flex-row items-center justify-between py-12 md:max-w-5xl mx-auto relative px-4 md:px-0 gap-4 md:gap-0">
           <div className="md:w-[45%]">
             <Image
@@ -287,21 +293,24 @@ export default function Home() {
             <div className="flex items-center gap-4 mb-4">
               <span className="font-black text-2xl">Dyanna Rosemary</span>
               <div className="flex gap-3">
-                <img
-                  className="h-6"
-                  src={`${currentDomain}wp-content/uploads/2026/03/instagram-ico.png`}
-                  alt="Instagram icono"
-                />
-                <img
-                  className="h-6"
-                  src={`${currentDomain}wp-content/uploads/2026/03/facebook-ico.png`}
-                  alt="Facebook icono"
-                />
-                <img
-                  className="h-6"
-                  src={`${currentDomain}wp-content/uploads/2026/03/wp-ico.png`}
-                  alt="Whatsapp icono"
-                />
+                <a
+                  href="https://www.instagram.com/adempiregroup_/"
+                  target="_blank">
+                  <img
+                    className="h-6"
+                    src={`${currentDomain}wp-content/uploads/2026/03/instagram-ico.png`}
+                    alt="Instagram icono"
+                  />
+                </a>
+                <a
+                  href="https://wa.me/17867866289"
+                  target="_blank">
+                  <img
+                    className="h-6"
+                    src={`${currentDomain}wp-content/uploads/2026/03/wp-ico.png`}
+                    alt="Whatsapp icono"
+                  />
+                </a>
               </div>
             </div>
             <p className="text-justify pb-2">
@@ -316,7 +325,8 @@ export default function Home() {
             </p>
             <div className="flex btn-primary-gradiant items-center rounded-full w-fit px-4 py-1 gap-4">
               <a
-                href="#"
+                href="https://wa.me/17867866289"
+                target="_blank"
                 className="text-white">
                 Agenda tu asesoría aquí
               </a>
@@ -329,8 +339,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <ChevronDown />
-      <section className="py-12 bg-primary-gray" >
+      <ChevronDown scrollToSectionChevron={scrollToSectionChevron} sectionId="talentos" />
+      <section className="py-12 bg-primary-gray" id="servicios-detalle"> 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center md:max-w-5xl mx-auto gap-x-16 gap-y-8 px-6 md:px-0">
           {itemsServices.map((item, index) => (
             <div
@@ -348,7 +358,7 @@ export default function Home() {
                 <p className="text-justify font-regular py-2 leading-5">{item.descripcion}</p>
                 <div className="flex items-center gap-2 gradient-border-image px-4">
                   <a
-                    href="#"
+                    href={item.boton}
                     className="font-regular">
                     Más info
                   </a>
@@ -363,7 +373,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="relative flex flex-col justify-center py-12">
+      <section className="relative flex flex-col justify-center py-12" id="talentos">
         <h2 className="relative z-1 font-black text-center text-3xl pb-8 text-white">Talentos</h2>
         <Image
           src={`${currentDomain}wp-content/uploads/2026/03/fondo-talentos.png`}
@@ -389,7 +399,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <ChevronDown />
+      <ChevronDown  scrollToSectionChevron={scrollToSectionChevron} sectionId="contacto"/>
       <section className="bg-primary-gray py-12 px-6 md:px-0">
         <div className="btn-primary-gradiant px-4 py-1 w-fit rounded-full mx-auto">
           <h4 className="font-black text-white text-xl text-center md:text-2xl ">

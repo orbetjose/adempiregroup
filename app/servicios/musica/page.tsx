@@ -23,7 +23,7 @@ export default function page() {
         <div className="md:max-w-3xl mx-auto px-6 md:px-0 space-y-24">
           <div className="bg-white p-8 md:py-12 md:px-16 card-rounded flex relative">
             <div className="btn-primary-gradiant absolute -top-6 left-1/2 -translate-x-1/2 md:translate-x-auto md:left-32 text-white px-8 py-1 rounded-xl">
-              <span className="font-black uppercase text-2xl">Starter</span>
+              <span className="font-black uppercase text-2xl">Solo</span>
             </div>
             <div className="md:w-1/4">
               <Image
@@ -46,7 +46,7 @@ export default function page() {
               </span>
             </div>
             <div className="flex btn-primary-gradiant items-center rounded-full w-67.5 md:w-fit px-4 py-1 gap-4  absolute text-white font-regular left-1/2 -translate-x-1/2 -bottom-4">
-              <a href="">Agenda tu asesoría aquí</a>
+              <a href="https://wa.me/17867866289" target="_blank">Agenda tu asesoría aquí</a>
               <img
                 src={`${currentDomain}wp-content/uploads/2026/03/arrow-button.png`}
                 className="h-3"
@@ -56,7 +56,7 @@ export default function page() {
           </div>
           <div className="bg-white p-8 md:py-12 md:px-16 card-rounded flex relative">
             <div className="btn-primary-gradiant absolute -top-6 left-1/2 -translate-x-1/2 md:translate-x-auto md:left-32 text-white px-8 py-1 rounded-xl">
-              <span className="font-black uppercase text-2xl">ADVANCED</span>
+              <span className="font-black uppercase text-2xl">Trío</span>
             </div>
             <div className="md:w-1/4">
               <Image
@@ -81,7 +81,7 @@ export default function page() {
               </span>
             </div>
             <div className="flex btn-primary-gradiant items-center rounded-full w-67.5 md:w-fit px-4 py-1 gap-4  absolute text-white font-regular left-1/2 -translate-x-1/2 -bottom-4">
-              <a href="">Agenda tu asesoría aquí</a>
+              <a href="https://wa.me/17867866289" target="_blank">Agenda tu asesoría aquí</a>
               <img
                 src={`${currentDomain}wp-content/uploads/2026/03/arrow-button.png`}
                 className="h-3"
@@ -91,7 +91,7 @@ export default function page() {
           </div>
           <div className="bg-white p-8 md:py-12 md:px-16 card-rounded flex relative">
             <div className="btn-primary-gradiant absolute -top-6 left-1/2 -translate-x-1/2 md:translate-x-auto md:left-32 text-white px-8 py-1 rounded-xl w-full md:w-auto">
-              <span className="font-black uppercase text-xl md:text-2xl">MÚSICA EN VIVO Y DJ ́S</span>
+              <span className="font-black uppercase text-xl md:text-2xl">Banda</span>
             </div>
             <div className="md:w-1/4">
               <Image
@@ -115,7 +115,7 @@ export default function page() {
               </span>
             </div>
             <div className="flex btn-primary-gradiant items-center rounded-full w-67.5 md:w-fit px-4 py-1 gap-4  absolute text-white font-regular left-1/2 -translate-x-1/2 -bottom-4">
-              <a href="">Agenda tu asesoría aquí</a>
+              <a href="https://wa.me/17867866289" target="_blank">Agenda tu asesoría aquí</a>
               <img
                 src={`${currentDomain}wp-content/uploads/2026/03/arrow-button.png`}
                 className="h-3"

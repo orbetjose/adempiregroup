@@ -192,6 +192,9 @@ body {
   background: linear-gradient(45deg, #7d3987, #ee2484);
 }
 
+
+
+
 .gradient-border-image {
   border: 3px solid transparent;
   border-radius: 15px;
@@ -201,6 +204,14 @@ body {
   background-origin: border-box;
   background-clip: padding-box, border-box;
   width: fit-content;
+}
+
+.gradient-border-image:hover {
+  background: #010d42;  
+}
+
+.gradient-border-image:hover img {
+  filter: brightness(0) invert(1);
 }
 
 .card-rounded {

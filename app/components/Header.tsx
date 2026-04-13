@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { getMenuInfo } from "../utils/wp";
 import { Menu } from "../types";
 import { useRouter, usePathname, redirect } from "next/navigation";
@@ -66,7 +65,7 @@ export default function Header() {
               href="/"
               className="flex z-50">
               <img
-                className=" md:h-14 h-11 logo mr-auto invert md:invert-0"
+                className={`md:h-12 h-12 logo mr-auto  ${menuOpen ? "invert" : "md:invert-0"} `}
                 src={`${currentDomain}wp-content/uploads/2026/03/logo-empire.png`}
                 alt="Logo Empire group"
               />

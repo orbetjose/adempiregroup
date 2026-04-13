@@ -28,7 +28,7 @@ export default function Footer() {
                   alt="Icono whatsapp"
                 />
                 <a
-                  href="https://api.whatsapp.com/send/?phone=%2B17867866289&text&type=phone_number&app_absent=0"
+                  href="https://wa.me/17867866289"
                   target="_blank">
                   +1 (786) 786-6289
                 </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               <div className="flex gap-4 justify-center md:justify-start">
                 <a
                   target="_blank"
-                  href="#">
+                  href="https://www.tiktok.com/@dyannarosemary">
                   <img
                     src={`${currentDomain}wp-content/uploads/2026/03/ico-tiktok.png`}
                     className="h-6"
@@ -53,7 +53,7 @@ export default function Footer() {
                 </a>
                 <a
                   target="_blank"
-                  href="#">
+                  href="https://www.instagram.com/adempiregroup_/">
                   <img
                     src={`${currentDomain}wp-content/uploads/2026/03/ico-instagram.png`}
                     className="h-6"
@@ -62,7 +62,7 @@ export default function Footer() {
                 </a>
                 <a
                   target="_blank"
-                  href="#">
+                  href="https://www.facebook.com/profile.php?id=61563652272802">
                   <img
                     src={`${currentDomain}wp-content/uploads/2026/03/ico-facebook.png`}
                     className="h-6"
@@ -71,7 +71,7 @@ export default function Footer() {
                 </a>
                 <a
                   target="_blank"
-                  href="#">
+                  href="https://wa.me/17867866289">
                   <img
                     src={`${currentDomain}wp-content/uploads/2026/03/ico-whatsapp.png`}
                     className="h-6"

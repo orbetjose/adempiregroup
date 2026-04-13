@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, FormEvent } from "react";
+import { useState, SubmitEvent } from "react";
 
 export default function ContactForm() {
   const currentDomain = process.env.NEXT_PUBLIC_WP_DOMAIN;
@@ -15,7 +15,7 @@ export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
@@ -181,11 +181,11 @@ export default function ContactForm() {
               </label>
             </div>
 
-            <div className="bg-transparent border gradient-border-image text-primary-blue py-1 px-4 rounded-full! hover:text-white disabled:opacity-50  font-poppins flex justify-evenly items-center w-30! hover:btn-primary-gradiant cursor-pointer">
+            <div className="border gradient-border-image text-primary-blue py-1 px-4 rounded-full! hover:text-white hover:font-bold disabled:opacity-50  font-poppins flex justify-evenly items-center w-30! cursor-pointer">
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="">
+                className="cursor-pointer">
                 {status === "loading" ? "Enviando..." : "Enviar"}
               </button>
               <img
