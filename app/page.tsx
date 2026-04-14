@@ -71,7 +71,7 @@ export default function Home() {
     },
     {
       imagen: "wp-content/uploads/2026/03/arlen.png",
-      nombre: "Arlen Villar",
+      nombre: "Alejandra Jaramillo",
     },
   ];
   const itemsServices = [
