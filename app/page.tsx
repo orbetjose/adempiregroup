@@ -70,7 +70,7 @@ export default function Home() {
       nombre: "Ariel Ramos",
     },
     {
-      imagen: "wp-content/uploads/2026/03/arlen.png",
+      imagen: "wp-content/uploads/2026/07/idea-02-1.png",
       nombre: "Alejandra Jaramillo",
     },
   ];
